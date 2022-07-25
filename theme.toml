@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Cookbook"
+license = "Unlicense"
+licenselink = "https://github.com/deedoubledub/cookbook-theme/blob/main/LICENSE"
+description = "A hugo theme for recipe management."
+homepage = "http://github.com/deedoubledub/cookbook-theme/"
+tags = ["recipes", "cookbook"]
+features = []
+min_version = "0.99.1"
+
+[author]
+  name = "David Wagner"
+  homepage = "www.deedoubledub.com"
