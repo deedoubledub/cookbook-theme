@@ -1,0 +1,21 @@
+<div class="card h-100 text-center" style="width: 18rem;">
+  <img src="{{ .Params.Image }}" class="card-img-top" alt="{{ .Title }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ .Title }}</h5>
+    <p class="card-text">{{ .Description }}</p>
+    <p class="card-text">
+      {{ with .Params.tags }}
+      <i data-feather="tag"></i>
+      {{ range . }}
+      {{ $href := print (absURL "tags/") (urlize .) }}
+      <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+      {{ end }}
+      {{ end }}
+    </p>
+  </div>
+  <div class="card-footer">
+    <div class="d-grid gap-2">
+      <a href="{{ .RelPermalink }}" class="btn btn-primary">Go To Recipe</a>
+    </div>
+  </div>
+</div>
