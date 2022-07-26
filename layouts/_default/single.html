@@ -1,15 +1,23 @@
 {{ define "main" }}
 <div class="container">
-  <h1>{{ .Title }}</h1>
-  <div class="row g-0">
+  <h1 class="text-center">{{ .Title }}</h1>
+  <img src="/images/{{ .Params.Image }}" class="img-fluid mx-auto d-block" alt="{{ .Title }}">
+  <div class="row row-cols-auto gy-1 gx-1 justify-content-center m-2">
+  <p>{{ .Params.Description }}</p>
+  </div>
+  <div class="row row-cols-auto gy-1 gx-1 justify-content-center m-2">
+    <i class="mt-2" data-feather="tag"></i>
+    {{ partial "tags.html" . }}
+  </div>
+  <hr class="w-50 m-auto">
+  <div class="row row-cols-auto justify-content-center gx-5 gy-2 m-4">
+    {{ partial "info.html" . }}
+  </div>
+  <hr class="w-50 m-auto mb-5">
+  <div class="row row-cols-auto justify-content-center">
     <div class="col">
-      <div class="row row-cols-auto gy-1 gx-1">
-        <i data-feather="tag"></i>
-        {{ partial "tags.html" . }}
-      </div>
+      {{ .Content }}
     </div>
   </div>
-  <br><br>
-  {{ .Content }}
 </div>
 {{ end }}

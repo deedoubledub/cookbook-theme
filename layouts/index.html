@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="container overflow-hidden">
-  <div class="row gy-4">
+  <div class="row gy-4 row-cols-auto justify-content-center">
     {{ range $index, $element := .Site.RegularPages }}
     <div class="col">
       {{ partial "card.html" . }}
