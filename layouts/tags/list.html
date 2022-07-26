@@ -1,9 +1,9 @@
 {{ define "main" }}
 <div class="container overflow-hidden">
   <div class="row gy-4 row-cols-auto justify-content-center">
-    {{ range $index, $element := .Site.RegularPages }}
+    {{ range .Pages }}
     <div class="col">
-      {{ partial "recipecard.html" . }}
+      {{ partial "tagcard.html" . }}
     </div>
     {{ end }}
   </div>
