@@ -9,18 +9,11 @@
     <p class="card-text">{{ .Description }}</p>
     <div class="row g-0">
       <div class="col-2">
-        {{ with .Params.tags }}
         <i data-feather="tag"></i>
       </div>
       <div class="col">
         <div class="row row-cols-auto gy-1 gx-1">
-          {{ range . }}
-          <div class="col">
-            {{ $href := print (absURL "tags/") (urlize .) ("/")}}
-            <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
-          </div>
-          {{ end }}
-          {{ end }}
+          {{ partial "tags.html" . }}
         </div>
       </div>
     </div>

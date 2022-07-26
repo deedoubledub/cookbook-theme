@@ -1,6 +1,15 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ partial "metadata.html" . }}
-<br><br>
-{{ .Content }}
+<div class="container">
+  <h1>{{ .Title }}</h1>
+  <div class="row g-0">
+    <div class="col">
+      <div class="row row-cols-auto gy-1 gx-1">
+        <i data-feather="tag"></i>
+        {{ partial "tags.html" . }}
+      </div>
+    </div>
+  </div>
+  <br><br>
+  {{ .Content }}
+</div>
 {{ end }}
