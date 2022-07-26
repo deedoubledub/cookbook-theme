@@ -1,20 +1,32 @@
 <div class="card h-100 text-center" style="width: 18rem;">
-  <img src="{{ .Params.Image }}" class="card-img-top" alt="{{ .Title }}">
+  <a href="{{ .RelPermalink }}">
+    <img src="/images/{{ .Params.Image }}" class="card-img-top" alt="{{ .Title }}">
+  </a>
   <div class="card-body">
-    <h5 class="card-title">{{ .Title }}</h5>
+    <a href="{{ .RelPermalink }}" class="text-decoration-none">
+      <h5 class="card-title">{{ .Title }}</h5>
+    </a>
     <p class="card-text">{{ .Description }}</p>
-    <p class="card-text">
-      {{ with .Params.tags }}
-      <i data-feather="tag"></i>
-      {{ range . }}
-      {{ $href := print (absURL "tags/") (urlize .) }}
-      <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
-      {{ end }}
-      {{ end }}
-    </p>
+    <div class="row g-0">
+      <div class="col-2">
+        {{ with .Params.tags }}
+        <i data-feather="tag"></i>
+      </div>
+      <div class="col">
+        <div class="row row-cols-auto gy-1 gx-1">
+          {{ range . }}
+          <div class="col">
+            {{ $href := print (absURL "tags/") (urlize .) ("/")}}
+            <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
+          </div>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
   </div>
   <div class="card-footer">
-    <div class="d-grid gap-2">
+    <div class="d-grid">
       <a href="{{ .RelPermalink }}" class="btn btn-primary">Go To Recipe</a>
     </div>
   </div>

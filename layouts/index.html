@@ -1,11 +1,11 @@
 {{ define "main" }}
-<div class="container text-center overflow-hidden">
-<div class="row row-cols-auto gy-4">
-  {{ range $index, $element := .Site.RegularPages }}
-  <div class="col">
-    {{ partial "card.html" . }}
+<div class="container overflow-hidden">
+  <div class="row gy-4">
+    {{ range $index, $element := .Site.RegularPages }}
+    <div class="col">
+      {{ partial "card.html" . }}
+    </div>
+    {{ end }}
   </div>
-  {{ end }}
-</div>
 </div>
 {{ end }}
