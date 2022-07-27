@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="container overflow-hidden">
+  <h1 class="text-center">
+    <i data-feather="tag"></i>
+    {{ .Title }}
+  </h1>
+  <div class="row gy-4 row-cols-auto justify-content-center">
+    {{ range .Pages }}
+    <div class="col">
+      {{ partial "recipecard.html" . }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
