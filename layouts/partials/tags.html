@@ -1,5 +1,5 @@
 {{ with .Params.tags }}
-{{ range . }}
+{{ range sort . }}
 <div class="col">
   {{ $href := print (absURL "tags/") (urlize .) ("/")}}
   <a class="btn btn-sm btn-outline-dark" href="{{ $href }}">{{ . }}</a>
