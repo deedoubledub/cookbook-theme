@@ -1,7 +1,65 @@
 {{ define "main"}}
-    <main id="main">
-      <div>
-       <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
-      </div>
-    </main>
+<div class="container">
+  <h1 class="text-center">Regular Old Plumbus</h1>
+  <img src="/images/plumbus.png" class="img-fluid mx-auto d-block" alt="{{ .Title }}">
+  <div class="row row-cols-auto gy-1 gx-1 justify-content-center m-2">
+  <p>Everyone has a plumbus in their home.</p>
+  </div>
+  <div class="row row-cols-auto gy-1 gx-1 justify-content-center m-2">
+    <i class="mt-2" data-feather="tag"></i>
+    <div class="col">
+      <a class="btn btn-sm btn-outline-dark" href="#">404</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-sm btn-outline-dark" href="#">Page</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-sm btn-outline-dark" href="#">Not</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-sm btn-outline-dark" href="#">Found</a>
+    </div>
+  </div>
+  <hr class="w-50 m-auto">
+  <div class="row row-cols-auto justify-content-center gx-5 gy-2 m-4">
+    <div class="col text-center">
+      <i data-feather="pie-chart"></i>
+      <p><strong>SERVINGS</strong></p>
+      <p>4</p>
+    </div>
+    <div class="col text-center">
+      <i data-feather="clock"></i>
+      <p><strong>PREP TIME</strong></p>
+      <p>0</p>
+    </div>
+    <div class="col text-center">
+      <i data-feather="zap"></i>
+      <p><strong>COOK TIME</strong></p>
+      <p>4</p>
+    </div>
+  </div>
+  <hr class="w-50 m-auto mb-5">
+  <div class="row row-cols-auto justify-content-center">
+    <div class="col">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 dinglebop</li>
+        <li>1 bunch of schleem</li>
+        <li>1 grumbo</li>
+        <li>1 fleeb in its juice</li>
+        <li>1 Shlami</li>
+        <li>2 Blamphs</li>
+      </ul>
+      <h2>Directions</h2>
+      <ol>
+        <li>take the dinglebop and smooth it out with a bunch of schleem; save the schleem for later batches</li>
+        <li>push the dinglebop through the grumbo and rub the fleeb against it; it's important that the fleeb is rubbed, because the fleeb has all of the fleeb juice</li>
+        <li>then a Shlami shows up and he rubs it, and spits on it</li>
+        <li>cut the fleeb; there are several hizzards in the way</li>
+        <li>the Blamphs rub against the chumbles, then shave away the plubus and grumbo</li>
+        <li>that leaves you with a regular old plumbus</li>
+      </ol>
+    </div>
+  </div>
+</div>
 {{ end }}
